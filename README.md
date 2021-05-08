@@ -5,4 +5,4 @@
 
 <a href="./Github/pokedex.apk">Here is The Apk</a>
 
-<img src ="./Github/pokedex_GIF.gif"
+<img src ="./Github/pokedex_GIF.gif"/>
