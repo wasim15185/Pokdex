@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SinglePokedexActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight=".35"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="2dp"
+                app:cardPreventCornerOverlap="true">
+
+                <ImageView
+                    android:id="@+id/imgOfPokeMon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    tools:src="@drawable/demo" />
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight=".65"
+
+                android:orientation="vertical"
+
+                >
+
+
+                <TextView
+                    android:id="@+id/nameOfPokeMon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:letterSpacing=".03"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:text="Name" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/Type_1_ForPokeMon"
+                        style="@style/ButtonLikeTextView"
+                        android:layout_marginRight="32dp"
+                        android:letterSpacing=".12"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/Type_2_ForPokeMon"
+                        style="@style/ButtonLikeTextView"
+                        android:layout_marginLeft="32dp"
+                        android:letterSpacing=".12" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!--            Wight Container LinearLayout-->
+
+                    <LinearLayout
+                        style="@style/LinearLayoutForHeightWeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+
+                        >
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="7dp"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:minWidth="128dp"
+                            app:cardBackgroundColor="#531dab"
+                            app:cardCornerRadius="3dp"
+                            app:cardPreventCornerOverlap="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/card_view_background"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/pokemonHeight"
+                                    style="@style/HeightWeightTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="8dp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white"
+                                    tools:text="56.6 KG" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="16dp"
+                                    android:letterSpacing=".05"
+                                    android:paddingBottom="8dp"
+                                    android:text="Height"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                    <!--            Height Container Linear Layout-->
+                    <LinearLayout
+                        style="@style/LinearLayoutForHeightWeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="7dp"
+                            android:background="@color/white"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:minWidth="128dp"
+                            app:cardCornerRadius="3dp"
+                            app:cardPreventCornerOverlap="true"
+
+                            >
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/card_view_background_2"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/pokemonWeight"
+                                    style="@style/HeightWeightTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="8dp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white"
+                                    tools:text="1.8 M" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="16dp"
+                                    android:letterSpacing=".05"
+                                    android:paddingBottom="8dp"
+                                    android:text="Weight"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--    Base Stat Showing Text-->
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Base Stats"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!--Stats will be from Here -->
+
+                <GridView
+                    android:id="@+id/gridView_single_pokemon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:numColumns="2" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
